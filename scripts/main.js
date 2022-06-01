@@ -35,6 +35,6 @@ function doStuff(result) {
     descriptionElement.appendChild(nodeDescription)
 
     const locationElement = document.getElementById("location")
-    let nodeLocation = document.createTextNode(result.data.location)
+    let nodeLocation = document.createTextNode("Common Locations: "+result.data.common_locations)
     locationElement.appendChild(nodeLocation)
 }
