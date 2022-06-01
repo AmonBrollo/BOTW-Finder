@@ -23,7 +23,7 @@ element.addEventListener("click", handleSubmitClick)
 function doStuff(result) {
     console.log(result);
     const nameElement = document.getElementById("name")
-    nameElement.setAttribute("newName",result.data.name)
+    nameElement.appendChild(result.data.name)
     const imageElement = document.getElementById("image")
     imageElement.setAttribute("src",result.data.image)
     const descriptionElement = document.getElementById("description")
