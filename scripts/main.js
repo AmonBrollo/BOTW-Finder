@@ -9,18 +9,22 @@ function handleSubmitClick() {
 element.addEventListener("click", handleSubmitClick)
 
 // call the API
-// const url = "https://botw-compendium.herokuapp.com/api/v2/entry/"
-// function getApi (url) {
-//     const userInput = input.value;
-//     async function getThing(url, doThis) {
-//         const response = await fetch(url);
-//         if (response.ok) {
-//             const data = await response.json();
-//             doThis(data);
-//         };
-//     };
-// };
+const url = "https://botw-compendium.herokuapp.com/api/v2/entry/";
+let results = null;
+const userInput = input.value;
+    async function getThing(url, doStuff) {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            doStuff(data);
+        };
+};
 
     // find the information within the API
 
 // get the result back to the user: item's name, description, image and locations.
+
+function doStuff(data) {
+    results = data;
+    console.log("first: ", results);
+}
