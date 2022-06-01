@@ -23,7 +23,8 @@ element.addEventListener("click", handleSubmitClick)
 function doStuff(result) {
     console.log(result);
     const nameElement = document.getElementById("name")
-    nameElement.appendChild(toString(result.data.name))
+    let myText = document.createTextNode(result.data.name)
+    nameElement.appendChild(myText)
     const imageElement = document.getElementById("image")
     imageElement.setAttribute("src",result.data.image)
     const descriptionElement = document.getElementById("description")
