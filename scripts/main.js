@@ -22,13 +22,19 @@ element.addEventListener("click", handleSubmitClick)
 // get the result back to the user: item's name, description, image and locations.
 function doStuff(result) {
     console.log(result);
+
     const nameElement = document.getElementById("name")
-    let myText = document.createTextNode(result.data.name)
-    nameElement.appendChild(myText)
+    let nodeName = document.createTextNode(result.data.name)
+    nameElement.appendChild(nodeName)
+
     const imageElement = document.getElementById("image")
     imageElement.setAttribute("src",result.data.image)
+
     const descriptionElement = document.getElementById("description")
-    descriptionElement.setAttribute("newdescription",result.data.description)
+    let nodeDescription = document.createTextNode(result.data.description)
+    descriptionElement.appendChild(nodeDescription)
+
     const locationElement = document.getElementById("location")
-    locationElement.setAttribute("newlocation",result.data.location)
+    let nodeLocation = document.createTextNode(result.data.location)
+    locationElement.appendChild(nodeLocation)
 }
