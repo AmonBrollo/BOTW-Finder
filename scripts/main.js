@@ -24,9 +24,6 @@ function doStuff(result) {
     console.log(result);
 
     const nameElement = document.getElementById("name")
-    let nodeName = document.createTextNode("")
-    nameElement.appendChild(nodeName)
-    const nameElement = document.getElementById("name")
     let nodeName = document.createTextNode(result.data.name)
     nameElement.appendChild(nodeName)
 
@@ -41,7 +38,3 @@ function doStuff(result) {
     let nodeLocation = document.createTextNode(result.data.location)
     locationElement.appendChild(nodeLocation)
 }
-
-// function clearElement(element) {
-//     let 
-// }
