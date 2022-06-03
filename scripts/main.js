@@ -21,6 +21,7 @@ element.addEventListener("click", handleSubmitClick)
 
 // get the result back to the user: item's name, description, image and locations.
 function doStuff(result) {
+    reset();
     console.log(result);
 
     const nameElement = document.getElementById("name")
@@ -37,4 +38,10 @@ function doStuff(result) {
     const locationElement = document.getElementById("location")
     let nodeLocation = document.createTextNode("Common Locations: "+result.data.common_locations)
     locationElement.appendChild(nodeLocation)
+}
+
+const reset = () => {
+    document.querySelector("#name").innerHTML = "";
+    document.querySelector("#description").innerHTML = "";
+    document.querySelector("#location").innerHTML = "";
 }
