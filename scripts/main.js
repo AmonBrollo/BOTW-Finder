@@ -1,7 +1,7 @@
 // get input from user
-const element = document.getElementById("submit-button");
+const element = document.getElementById("submit-button")
 
-function handleSubmitClick() {
+functon handleSubmitClick() {
     const inputElement = document.getElementById("userInputt");
     const inputValue = inputElement.value
 
