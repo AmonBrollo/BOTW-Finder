@@ -2,14 +2,14 @@
 const element = document.getElementById("submit-button");
 
 function handleSubmitClick() {
-    const inputElement = document.getElementById("userInput");
+    const inputElement = document.getElementById("userInputt");
     const inputValue = inputElement.value
 
     // call the API
-    // const url = "https://botw-compendium.herokuapp.com/api/v2/entry/";
+    const url = "https://botw-compendium.herokuapp.com/api/v2/entry/";
     async function getThing() {
         // find the information within the API
-        // const response = await fetch(url+inputValue);
+        const response = await fetch(url+inputValue);
         if (response.ok) {
             const result = await response.json();
             doStuff(result);
