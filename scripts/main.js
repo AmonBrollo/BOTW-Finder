@@ -2,7 +2,7 @@
 const element = document.getElementById("submit-button");
 
 function handleSubmitClick() {
-    const inputElemento = document.getElementById("userInput");
+    const inputElement = document.getElementById("userInput");
     const inputValue = inputElement.value
 
     // call the API
